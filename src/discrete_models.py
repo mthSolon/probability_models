@@ -10,9 +10,9 @@ def bernoulli_page():
 def binomial_page():
     st.latex(r"P(X=k) = \binom{x}{k} \; \cdot \; p^k \; \cdot \; (1-p)^{x-k}")
     prob = st.slider("Escolha a probabilidade:", 0.0, 1.0, key="binomial_p")
-    k = st.slider("Escolha o valor da variável aleatória k:", 0, 100, key="binomial_k")
-    values = binomial(prob, k)
-    if k:
+    x = st.slider("Escolha o valor da variável aleatória x:", 0, 100, key="binomial_x")
+    values = binomial(prob, x)
+    if x:
         st.bar_chart(values)
 
 def geometric_page():
